@@ -56,4 +56,5 @@ setosa_sepal_lengths_dplyr <- iris %>%
     filter(Species == "setosa") %>%
     select(Sepal.Length)
 
-print(setosa_sepal_lengths_dplyr)
+# hist(setosa_sepal_lengths)
+hist(setosa_sepal_lengths_dplyr$Sepal.Length)
