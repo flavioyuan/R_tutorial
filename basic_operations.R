@@ -49,7 +49,7 @@ setosa_sepal_lengths <- iris[iris$Species == "setosa", "Sepal.Length"]
 
 # Install and load the dplyr package if not already installed
 # install.packages("dplyr")
-library(dplyr)
+if (!require(dplyr)) install.package(dplyr)
 
 # Filter the iris dataset to get Sepal.Length where Species is "setosa"
 setosa_sepal_lengths_dplyr <- iris %>%
@@ -57,3 +57,6 @@ setosa_sepal_lengths_dplyr <- iris %>%
     select(Sepal.Length)
 
 print(setosa_sepal_lengths_dplyr)
+
+# Plotting histogram  of sepal length
+hist(setosa_sepal_lengths)
